@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Task Management App</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  
+  <nav>
+    <img src="logo.jpg" alt="Logo" class="logo">
+    <div class="nav-links">
+      <a href="login.html" id="logoutBtn">Login</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="task_manager.html">Task Manager</a>
+      <a href="kanban.html">Project Boards</a>
+      <a href="reports.html">Reports</a>
+      <a href="register.html">Registration</a>
+      <a href="settings.html">Settings</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </div>
+  </nav>
+<p>Welcome to your personalized dashboard.</p>
+<p> Here you can view your <span> task statistics</span>, <span>track progress </span>, and <span> get inspired </span> with daily quotes and live weather updates. </p> <p> Use this page as your central hub to monitor your goals and quickly navigate to other tools in the app.</p>
+
+  <div class="container">
+    <h1>Welcome, <span id="userWelcome"></span>!</h1>
+
+    <h2>Task Overview</h2>
+    <div class="stats">
+      <div>Total Tasks: <span id="statTotal">0</span></div>
+      <div>Completed: <span id="statDone">0</span></div>
+      <div>Pending: <span id="statTodo">0</span></div>
+    </div>
+
+    
+    <div class="progress-bar">
+      <div class="progress-bar-inner" id="progressBarInner"></div>
+    </div>
+
+    
+    <h2>Quick Actions</h2>
+    <div class="quick-actions">
+      <a href="task_manager.html"><button>Create New Task</button></a>
+      <a href="project_board.html"><button>View Kanban Board</button></a>
+      <a href="reports.html"><button>View Reports</button></a>
+    </div>
+
+    
+    <div id="weather"></div>
+    <div id="quote" class="quote"></div>
+  </div>
+
+  <br>
+  <br>
+  <footer>
+    <p>&copy; 2025 TaskNest:- Manage your projects . All rights reserved.</p>
+    <p><a href="mailto:nikitasheoran@gmail.com">nikitasheoran@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>

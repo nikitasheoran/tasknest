@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <img src="logo.jpg" alt="Logo" class="logo">
+    <div class="nav-links">
+      <a href="login.html" id="logoutBtn">Login</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="task_manager.html">Task Manager</a>
+      <a href="project_board.html">Project Boards</a>
+      <a href="reports.html">Reports</a>
+      <a href="register.html">Registration</a>
+      <a href="settings.html">Settings</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </div>
+  </nav>
+  <p><span>Create</span>, <span>organize </span>, and <span>update </span> all your tasks in one place.</p>
+  <p> Set priorities, track deadlines, and keep your work moving forward.</p>
+  <p>Stay on top of your projects and never miss an important task again!</p>
+  <div class="container">
+    <h2>Create Task</h2>
+    <form id="taskForm">
+      Title: <input type="text" id="taskTitle" placeholder="Title" required>
+      Description: <textarea id="taskDesc" placeholder="Description"></textarea>
+      Priority Scale: <select id="taskPriority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      Due Date: <input type="date" id="taskDue"  required>
+      <div class="form-error" id="taskErr"></div>
+      <button type="submit">Add Task</button>
+    </form>
+    <h3>Your Tasks</h3>
+    <div id="taskList"></div>
+    
+  </div>
+  <br>
+  <br>
+
+  <footer>
+    <p>&copy; 2025 TaskNest:- Manage your projects . All rights reserved.</p>
+    <p><a href="mailto:nikitasheoran@gmail.com">nikitasheoran@gmail.com</a></p>
+  </footer>
+  
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+ <nav>
+    <img src="logo.jpg" alt="Logo" class="logo">
+    <div class="nav-links">
+      <a href="index.html" id="logoutBtn">Login</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="task_manager.html">Task Manager</a>
+      <a href="project_board.html">Project Boards</a>
+      <a href="reports.html">Reports</a>
+      <a href="register.html">Registration</a>
+      <a href="settings.html">Settings</a>
+      <a href="#" id="logoutBtn">Logout</a>
+
+    </div>
+  </nav>
+  
+   <p>Welcome to your<span> Task Management App</span>.</p> 
+   <p> Log in to access your dashboard, manage tasks, and track your progress. First-time users can enter any username and password to create an account instantly.</p>
+  <div class="container">
+    <h1>Login</h1>
+    <form id="loginForm">
+      <input type="text" id="loginUser" placeholder="Email" required>
+      <input type="password" id="loginPass" placeholder="Password" required>
+      <label>
+        <input type="checkbox" id="rememberMe"> Remember Me
+      </label>
+      <div class="form-error" id="loginErr"></div>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  <br>
+  <br>
+
+  <footer>
+    <p>&copy; 2025 TaskNest:- Manage your projects . All rights reserved.</p>
+    <p><a href="mailto:nikitasheoran@gmail.com">nikitasheoran@gmail.com</a></p>
+  </footer>
+
+  
+</body>
+</html>
