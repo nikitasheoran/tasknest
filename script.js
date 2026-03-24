@@ -331,6 +331,51 @@ function checkSession() {
   }
 }
 
+// REGISTER PAGE LOGIC
+const registerForm = document.getElementById("registerForm");
+const regErr = document.getElementById("regErr");
+
+registerForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const username = document.getElementById("regUser").value.trim();
+  const email = document.getElementById("regEmail").value.trim();
+  const password = document.getElementById("regPass").value.trim();
+  const confirm = document.getElementById("regConfirm").value.trim();
+
+  // Simple validations
+  if (!username || !email || !password || !confirm) {
+    regErr.textContent = "All fields are required!";
+    return;
+  }
+
+  if (password !== confirm) {
+    regErr.textContent = "Passwords do not match!";
+    return;
+  }
+
+  // Load existing users from localStorage
+  let users = JSON.parse(localStorage.getItem("users")) || {};
+
+  // Check if email already exists
+  if (users[email]) {
+    regErr.textContent = "Email already registered! Please login.";
+    return;
+  }
+
+  // Save new user
+  users[email] = {
+    username: username,
+    password: password
+  };
+  localStorage.setItem("users", JSON.stringify(users));
+
+  alert("Registration successful! You will be redirected to login page.");
+
+  // Redirect to login page
+  window.location.href = "index.html";
+});
+
 // Run session check on protected pages
 if (
   ['dashboard.html', 'settings.html', 'task_manager.html', 'project_board.html', 'reports.html']
